@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="tailwind.css">
+    <title>ex</title>
+<style>
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+html, body {font-family: 'Noto Sans KR', sans-serif;}
+
+</style>
+</head>
+<body class="bg-gray-50">
+    <header 
+        class="
+            fixed w-full z-40
+            sm:right-1/2
+            sm:max-w-screen-sm
+            transform sm:translate-x-1/2
+            bg-white m-auto p-3 px-6 flex 
+            justify-between border-b
+        "
+    >
+        <span id="toggleBtn"><a><i class="fas fa-bars"></i></a></span>
+        <span class="text-indigo-700 font-extrabold">BRAND</span>
+        <span><a href=""><i class="fas fa-search"></i></a></span>
+    </header>
+    <div class="headerhight h-12"></div>
+    <section 
+        class="
+            overflow-auto
+            bg-gray-100 m-auto p-3 px-6 flex 
+            justify-between
+            flex-col
+            m-auto
+            max-w-screen-sm
+            text-center
+        "
+    >
+        <h1 class="text-2xl py-4">heading</h1>
+        <p class="px-10">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolorum laudantium nesciunt, aspernatur accusamus sapiente nihil dolore veniam voluptas ea asperiores, qui ut reiciendis, modi nobis explicabo totam dolorem quod.
+        </p>
+        <div class="bg-white rounded-3xl mt-14 py-7">
+            <h2 class="pt-6 text-xl">SUBJECT</h2>
+            <p class="py-10 text-left px-8">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta similique voluptates at voluptate dolore mollitia iste quaerat aliquid accusantium necessitatibus quae asperiores fugit unde blanditiis deserunt, quis, et libero dolor!
+            </p>
+            <button type="button" class="border rounded px-7 py-3">  Submit</button>
+        </div>
+        
+    </section>
+    <div 
+        class="
+            py-10 h-12
+        "
+    >
+    </div>
+    <footer 
+        class="
+            px-14
+            sm:px-20
+            fixed w-full
+            bottom-0
+            sm:right-1/2
+            sm:max-w-screen-sm
+            transform sm:translate-x-1/2
+            bg-white m-auto p-3 px-6 flex 
+            justify-between border-t
+        "
+    >
+        <span class="text-center text-lg"><a href="index.html"><i class="fas fa-home"></i><br><span class="text-xs">Home</span></a></span>
+        <span class="text-center text-lg"><a href=""><i class="fas fa-store"></i><br><span class="text-xs">Shop</span></a></span>
+        <span class="text-center text-lg"><a href=""><i class="fas fa-box"></i><br><span class="text-xs">Item</span></a></span>
+        <span class="text-center text-lg"><a href="login.html"><i class="fas fa-user"></i><br><span class="text-xs">My</span></a></span>
+    </footer>
+
+
+<aside id="asideNav" class="
+    asideNav
+    fixed top-0 z-50
+    bg-white
+    h-full 
+">
+    <nav class="py-4">
+        <div class="
+            flex justify-between px-7
+        ">
+            <H1 class="inline-block text-indigo-700 font-extrabold">BRAND</H1>
+            <span id="asideNavCloseBtn"><a><i class="fas fa-times"></i></a></span>
+        </div>
+        <ul class="my-10">
+            <li class="py-3 px-7 border-t"><a href="index.html">Home</a></li>
+            <li class="py-3 px-7 border-t"><a href="">About</a></li>
+            <li class="py-3 px-7 border-t"><a href="">Shop</a></li>
+            <li class="py-3 px-7 border-t"><a href="">Item</a></li>
+            <li class="py-3 px-7 border-t border-b"><a href="">Setting</a></li>
+        </ul>
+    </nav>
+
+</aside>
+<div id="asideNavBg" class="
+    fixed z-40 top-0
+    w-full
+    h-full
+    bg-black
+    opacity-50
+"></div>
+<style>
+    .asideNav {
+        width: 200px;
+        left: -200px;
+    }
+    .asideNavOpen {
+        transition: all .4s ease-in-out;
+        transform: translateX(200px);
+    }
+
+</style>
+<script>
+    var toggleBtn = document.getElementById('toggleBtn');
+    var asideNav = document.getElementById('asideNav');
+    var asideNavBg = document.getElementById('asideNavBg');
+    var asideNavCloseBtn = document.getElementById('asideNavCloseBtn');
+    asideNavBg.style.display="none";
+    toggleBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        asideNav.classList.toggle('asideNavOpen');
+        asideNavBg.style.display='block';
+    });
+    asideNavCloseBtn.addEventListener('click', function(){
+        asideNav.classList.toggle('asideNavOpen');
+        asideNavBg.style.display='none';
+    });
+    asideNavBg.addEventListener('click', function(){
+        asideNav.classList.toggle('asideNavOpen');
+        asideNavBg.style.display='none';
+    });
+    
+
+</script>
+</body>
+</html>
